@@ -81,7 +81,7 @@ app.get("/",(_,res)=>{
 
 app.post("/api/portfolio-abilities",async (req,res)=>{
   try{
-    const {question,project}=req.body;
+    const {question,projects}=req.body;
 
     if(!question){
       return res.status(400).json({error:"Question is required"})
@@ -143,7 +143,7 @@ RESPONSE RULES:
     const prompt=`
     ${systemRole}
 
-    ${devloperContext}
+    ${developerContext}
 
     ${projectContext}
 
