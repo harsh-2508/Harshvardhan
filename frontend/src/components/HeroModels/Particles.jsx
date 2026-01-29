@@ -1,0 +1,74 @@
+import { useRef, useMemo } from "react";
+import { useFrame } from "@react-three/fiber";
+
+const Particles = ({ count = 200 }) => {
+  const mesh = useRef();
+
+  const particles = useMemo(() => {
+    const temp = [];
+    for (let i = 0; i < count; i++) {
+      temp.push({
+        position: [
+          (Math.random() - 0.5) * 10,
+          Math.random() * 10 + 5,
+          (Math.random() - 0.5) * 10,
+        ],
+        speed: 0.005 + Math.random() * 0.001,
+      });
+    }
+    return temp;
+  }, [count]);
+
+  useFrame(() => {
+    // Safety check: ensure mesh and geometry exist before updating
+    if (!mesh.current || !mesh.current.geometry) return;
+
+    const positions = mesh.current.geometry.attributes.position.array;
+
+    for (let i = 0; i < count; i++) {
+      let y = positions[i * 3 + 1];
+      y -= particles[i].speed;
+      
+      // Reset particle to top if it falls below -2
+      if (y < -2) y = Math.random() * 10 + 5;
+      
+      positions[i * 3 + 1] = y;
+    }
+    mesh.current.geometry.attributes.position.needsUpdate = true;
+  });
+
+  // Create the initial positions array based on the calculated particles
+  const positions = useMemo(() => {
+    const pos = new Float32Array(count * 3);
+    particles.forEach((p, i) => {
+      pos[i * 3] = p.position[0];
+      pos[i * 3 + 1] = p.position[1];
+      pos[i * 3 + 2] = p.position[2];
+    });
+    return pos;
+  }, [count, particles]);
+
+  return (
+    // FIX: key={count} forces React to re-mount the component when count changes
+    // This prevents the "buffer attribute resizing" error
+    <points ref={mesh} key={count}>
+      <bufferGeometry>
+        <bufferAttribute
+          attach="attributes-position"
+          count={count}
+          array={positions}
+          itemSize={3}
+        />
+      </bufferGeometry>
+      <pointsMaterial
+        color="#ffffff"
+        size={0.05}
+        transparent
+        opacity={0.9}
+        depthWrite={false}
+      />
+    </points>
+  );
+};
+
+export default Particles;
