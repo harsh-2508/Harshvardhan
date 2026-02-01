@@ -82,7 +82,7 @@ PROJECT:
 
     try {
       // FIX: Added 'await' here
-      const res = await fetch("http://localhost:8080/api/portfolio-abilities", {
+      const res = await fetch("/api/portfolio-abilities", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

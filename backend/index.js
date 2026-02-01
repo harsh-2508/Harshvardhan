@@ -2,13 +2,22 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import {  GoogleGenerativeAI } from "@google/generative-ai";
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+// 1. CONFIGURE ENV & APP FIRST
 dotenv.config();
+const app = express();
 
-const app=express();
+// 2. FIX __DIRNAME FOR ES MODULES
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+//3.middlewares
 app.use(cors());
 app.use(express.json());
 
+// 4. API ROUTES (MUST BE BEFORE STATIC FILES)
+// Initialize Gemini
 const genAI=new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 app.post("/api/job-fit",async (req,res)=>{
@@ -75,9 +84,6 @@ ${jobDescription}
   }
 });
 
-app.get("/",(_,res)=>{
-  res.send("Job Fit Analyzer API running")
-});
 
 app.post("/api/portfolio-abilities",async (req,res)=>{
   try{
@@ -166,9 +172,17 @@ RESPONSE RULES:
 
 });
 
+// 5. SERVE STATIC FILES (AFTER API ROUTES)
+// Serve the Vite build output
+app.use(express.static(path.join(__dirname, "dist")));
+
+// NEW (Fixed)
+// We use a Regex /^(.*)$/ to match "everything" safely
+app.get(/^(.*)$/, (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
 
 const PORT = process.env.PORT || 8080;
-
-app.listen(process.env.PORT,()=>
-  console.log(`Server running on server ${PORT}`)
+app.listen(PORT, '0.0.0.0', () =>
+  console.log(`Server running on port ${PORT}`)
 );

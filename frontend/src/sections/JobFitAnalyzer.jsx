@@ -11,7 +11,7 @@ export default function JobFitAnalyzer() {
     setResult(null);
 
     try {
-      const res = await fetch("http://localhost:8080/api/job-fit", {
+      const res = await fetch("/api/job-fit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ jobDescription: jobDesc }),

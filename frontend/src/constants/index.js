@@ -32,7 +32,7 @@ export const certifications = [
     name: "Oracle Cloud Infrastructur 2025 Generative AI Professional",
     date: "JUL 2025",
     link: "#",
-    logo: "/public/Oracle_Logo.svg.png",
+    logo: "/Oracle_Logo.svg.png",
     issuer: "Oracle",
   },
   {
@@ -40,7 +40,7 @@ export const certifications = [
     name: "IBM GenAI",
     date: "Jun 2025",
     link: "#",
-    logo: "/public/ibm.png",
+    logo: "/ibm.png",
     issuer: "IBM",
   },
   {
@@ -48,7 +48,7 @@ export const certifications = [
     name: "The Bits and Bytes of Computer Networking",
     date: "Nov 2025",
     link: "#",
-    logo: "/public/Google.png",
+    logo: "/Google.png",
     issuer: "Google",
   },
   {
@@ -56,7 +56,7 @@ export const certifications = [
     name: "Introduction to Machine Learning",
     date: "May 2025",
     link: "#",
-    logo: "/public/Unknown.jpeg",
+    logo: "/Unknown.jpeg",
     issuer: "NPTEL",
   },
 ];
@@ -397,12 +397,12 @@ const socialImgs = [
   },
   {
     name: "github",
-    imgPath: "/public/icons8-github-24.png",
+    imgPath: "/icons8-github-24.png",
     url:"https://github.com/harsh-2508"
   },
   {
     name: "Leetcode",
-    imgPath: "/public/icons8-leetcode-24.png",
+    imgPath: "/icons8-leetcode-24.png",
     url:"https://leetcode.com/u/harshvardhan_2508/"
   },
   {
