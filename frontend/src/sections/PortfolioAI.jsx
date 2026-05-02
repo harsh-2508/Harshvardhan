@@ -81,8 +81,9 @@ PROJECT:
     setAnswer("");
 
     try {
+      const API_URL=import.meta.env.VITE_BACKEND_URL || "";
       // FIX: Added 'await' here
-      const res = await fetch("/api/portfolio-abilities", {
+      const res = await fetch(`${API_URL}/api/portfolio-abilities`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
