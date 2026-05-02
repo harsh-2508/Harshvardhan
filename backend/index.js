@@ -172,15 +172,9 @@ RESPONSE RULES:
 
 });
 
-// 5. SERVE STATIC FILES (AFTER API ROUTES)
-// Serve the Vite build output
-app.use(express.static(path.join(__dirname, "dist")));
 
-// NEW (Fixed)
-// We use a Regex /^(.*)$/ to match "everything" safely
-app.get(/^(.*)$/, (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
+
+
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, '0.0.0.0', () =>

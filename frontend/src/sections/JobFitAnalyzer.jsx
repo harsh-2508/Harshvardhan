@@ -11,7 +11,12 @@ export default function JobFitAnalyzer() {
     setResult(null);
 
     try {
-      const res = await fetch("/api/job-fit", {
+      // 1. Pull the Render backend URL from Vite environment variables
+      // We use a fallback to empty string just in case, to prevent undefined errors
+      const API_URL = import.meta.env.VITE_BACKEND_URL || "";
+
+      // 2. Use the dynamic URL with backticks (template literal)
+      const res = await fetch(`${API_URL}/api/job-fit`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ jobDescription: jobDesc }),
