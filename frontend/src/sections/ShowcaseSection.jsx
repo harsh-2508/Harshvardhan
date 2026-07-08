@@ -61,7 +61,7 @@ const ShowcaseSection = () => {
             <div className="w-full h-64 md:h-80 rounded-xl overflow-hidden relative mb-6 border border-white/5">
               <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-500 z-10"/>
               <img 
-                src="/images/project1.png" 
+                src="/images/agromind.png" 
                 alt="AgroMind GenAI Project" 
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" 
               />
@@ -118,7 +118,7 @@ const ShowcaseSection = () => {
             {/* Image with Zoom */}
             <div className="w-32 h-24 md:w-40 md:h-28 shrink-0 rounded-lg overflow-hidden relative border border-white/5">
                <img 
-                src="/images/project2.png" 
+                src="/images/vidyadrishti.png" 
                 alt="VidyaDrishti" 
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out" 
               />
@@ -132,7 +132,7 @@ const ShowcaseSection = () => {
               
               {/* Buttons */}
               <div className="flex gap-3 mt-1">
-                <a href="https://github.com/harsh-2508/vidyaDrishti" className="px-3 py-1.5 rounded-md bg-white/10 text-xs font-semibold text-white hover:bg-violet-600 hover:text-white transition-all">
+                <a href="https://vidya-drishti.vercel.app/login" className="px-3 py-1.5 rounded-md bg-white/10 text-xs font-semibold text-white hover:bg-violet-600 hover:text-white transition-all">
                   Live Demo
                 </a>
                 <a href="https://github.com/harsh-2508/vidyaDrishti" className="px-3 py-1.5 rounded-md border border-white/10 text-xs font-semibold text-white-50 hover:text-white hover:border-violet-500/50 transition-all">
@@ -142,7 +142,7 @@ const ShowcaseSection = () => {
             </div>
           </div>
 
-           {/* Card 3: Smart Attendance */}
+           {/* Card 3: text editor */}
            <div 
             className="flex-1 group relative rounded-2xl bg-zinc-900/80 border border-white/10 p-5 
               hover:border-purple-500/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.1)] 
@@ -152,17 +152,17 @@ const ShowcaseSection = () => {
             {/* Image with Zoom */}
             <div className="w-32 h-24 md:w-40 md:h-28 shrink-0 rounded-lg overflow-hidden relative border border-white/5">
                <img 
-                src="/images/project3.png" 
+                src="/images/texteditor.png" 
                 alt="Smart Attendance System" 
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out" 
               />
             </div>
             
             <div className="flex flex-col justify-center w-full">
-              <h2 className="text-lg font-bold text-white mb-1 group-hover:text-violet-500 transition-colors">Shiksha-Saathi
+              <h2 className="text-lg font-bold text-white mb-1 group-hover:text-violet-500 transition-colors">Collabrative Text Editor
 </h2>
               <p className="text-white-50 text-xs md:text-sm line-clamp-2 mb-3">
-                A facial recognition based attendance system built with the MERN stack.
+                It's a simple web based writing tool where people can just write together
               </p>
 
               {/* Buttons */}
