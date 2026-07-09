@@ -61,7 +61,7 @@ const ShowcaseSection = () => {
             <div className="w-full h-64 md:h-80 rounded-xl overflow-hidden relative mb-6 border border-white/5">
               <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-500 z-10"/>
               <img 
-                src="/frontend/images/agromind.png" 
+                src="/images/agromind.png" 
                 alt="AgroMind GenAI Project" 
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" 
               />
@@ -118,7 +118,7 @@ const ShowcaseSection = () => {
             {/* Image with Zoom */}
             <div className="w-32 h-24 md:w-40 md:h-28 shrink-0 rounded-lg overflow-hidden relative border border-white/5">
                <img 
-                src="/frontend/images/vidyadrishti.png" 
+                src="/images/vidyadrishti.png" 
                 alt="VidyaDrishti" 
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out" 
               />
@@ -152,7 +152,7 @@ const ShowcaseSection = () => {
             {/* Image with Zoom */}
             <div className="w-32 h-24 md:w-40 md:h-28 shrink-0 rounded-lg overflow-hidden relative border border-white/5">
                <img 
-                src="/frontend/images/texteditor.png" 
+                src="/images/texteditor.png" 
                 alt="Smart Attendance System" 
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out" 
               />
