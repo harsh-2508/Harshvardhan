@@ -65,7 +65,7 @@ const Hero = () => {
             <Button
               className="md:w-80 md:h-16 w-60 h-12"
               text="See My Resume"
-              href="/resume/RESUME_JUN.pdf"
+              href="/frontend/resume/RESUME_JUN.pdf"
               target="_blank" //this now force the new tab
             />
           </div>
