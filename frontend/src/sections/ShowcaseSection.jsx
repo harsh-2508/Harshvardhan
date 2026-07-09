@@ -63,7 +63,7 @@ const ShowcaseSection = () => {
               <img 
                 src="/images/agromind.png" 
                 alt="AgroMind GenAI Project" 
-                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" 
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out object-fill" 
               />
             </div>
 
@@ -120,7 +120,7 @@ const ShowcaseSection = () => {
                <img 
                 src="/images/vidyadrishti.png" 
                 alt="VidyaDrishti" 
-                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out" 
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out object-fill" 
               />
             </div>
 
@@ -154,7 +154,7 @@ const ShowcaseSection = () => {
                <img 
                 src="/images/texteditor.png" 
                 alt="Smart Attendance System" 
-                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out" 
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out object-fill" 
               />
             </div>
             

@@ -31,7 +31,7 @@ export const certifications = [
     id: 1,
     name: "Oracle Cloud Infrastructur 2025 Generative AI Professional",
     date: "JUL 2025",
-    link: "#",
+    link: "https://drive.google.com/file/d/1_NpRbXFKhIo-BmcYsz243z65wN9UUUku/view?usp=sharing",
     logo: "/Oracle_Logo.svg.png",
     issuer: "Oracle",
   },
@@ -39,7 +39,7 @@ export const certifications = [
     id: 2,
     name: "IBM GenAI",
     date: "Jun 2025",
-    link: "#",
+    link: "https://drive.google.com/file/d/1LEc0fEgQOx6-05jSGWBlR-9gSVTOavWU/view?usp=sharing",
     logo: "/ibm.png",
     issuer: "IBM",
   },
@@ -47,7 +47,7 @@ export const certifications = [
     id: 3,
     name: "The Bits and Bytes of Computer Networking",
     date: "Nov 2025",
-    link: "#",
+    link: "https://drive.google.com/file/d/1BzLR3yvtGlYDIEDJuISfzYkvBfwzqE0s/view?usp=sharing",
     logo: "/Google.png",
     issuer: "Google",
   },
@@ -56,6 +56,14 @@ export const certifications = [
     name: "Introduction to Machine Learning",
     date: "May 2025",
     link: "#",
+    logo: "/Unknown.jpeg",
+    issuer: "NPTEL",
+  },
+  {
+    id: 5,
+    name: "Marketing Analytics",
+    date: "May 2026",
+    link: "https://drive.google.com/file/d/19SXfTJ6hJr9aSEi4Jk0PipRkujZIqD9y/view?usp=sharing",
     logo: "/Unknown.jpeg",
     issuer: "NPTEL",
   },
@@ -82,7 +90,7 @@ const words = [
 const counterItems = [
   {
     id: 1,
-    value: 90,
+    value: 115,
     label: "DSA Problem solved",
     suffix: "+",
   },
@@ -98,12 +106,12 @@ const counterItems = [
     label: "Hackathons Participated",
     suffix: "",
   },
-  {
-    id: 4,
-    value: 12, // Suggestion: Technologies you know (React, Node, Mongo, Tailwind, etc.)
-    label: "Technologies Mastered",
-    suffix: "+",
-  },
+  // {
+  //   id: 4,
+  //   value: 12, // Suggestion: Technologies you know (React, Node, Mongo, Tailwind, etc.)
+  //   label: "Technologies Mastered",
+  //   suffix: "+",
+  // },
 ];
 
 const logoIconsList = [
