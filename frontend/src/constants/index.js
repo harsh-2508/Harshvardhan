@@ -90,7 +90,7 @@ const words = [
 const counterItems = [
   {
     id: 1,
-    value: 115,
+    value: 180,
     label: "DSA Problem solved",
     suffix: "+",
   },
